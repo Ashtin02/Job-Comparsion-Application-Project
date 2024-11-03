@@ -16,6 +16,19 @@
         <label>Email:</label><input id="email" type="text" placeholder="Email Address">
         <label>Password:</label><input id="password" type="password" placeholder="Password"
     </section>
+
+    <p> <b> Get current url </b></p>
+
+    <button onclick = "getUrl">
+        Get URL
+    </button>
+    <p id="url"></p>
+    <script>
+        function getUrl() {
+            let page_url = document.URL
+            document.getElementById("url").innerHTML = page_url
+        }
+    </script>
     
 </body>
 </html>

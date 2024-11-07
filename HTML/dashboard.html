@@ -29,15 +29,18 @@
             <div id="filter-container">
 
                 <div id="filter-header">
-                    <h2>Filters</h2>
+                        <h2>Filters</h2>
                 </div>
-                <form id="filter-form">
-                    <label><input type="checkbox" name="filter" value="salary"> Salary</label><br><br>
-                    <label><input type="checkbox" name="filter" value="remote"> Remote Work</label><br><br>
-                    <label><input type="checkbox" name="filter" value="worklife"> Work/Life Balance</label><br><br>
-                    <label><input type="checkbox" name="filter" value="growth"> Growth Opportunities</label><br><br>
-                    <label><input type="checkbox" name="filter" value="stocks"> Stocks</label><br><br>
-                </form>
+                
+                <div id="filter-content">
+                    <form id="filter-form">
+                        <label><input type="checkbox" name="filter" value="salary"> Salary</label><br><br>
+                        <label><input type="checkbox" name="filter" value="remote"> Remote Work</label><br><br>
+                        <label><input type="checkbox" name="filter" value="worklife"> Work/Life Balance</label><br><br>
+                        <label><input type="checkbox" name="filter" value="growth"> Growth Opportunities</label><br><br>
+                        <label><input type="checkbox" name="filter" value="stocks"> Stocks</label><br><br>
+                    </form>
+                </div>
 
 
             </div>
@@ -47,7 +50,12 @@
                         <h2>Job 1:</h2>
                         <h2 id="company-1-Name"></h2>
                     </div>
+                <div id="job-content">
                 <form id="job-1-form">
+
+                    <label for="job-1-name">Company Name: </label>
+                    <input id="job-1-name" type="text" placeholder="Company Name"><br><br>
+
                     <label for="job-1-salary">Salary:<input type="number" id="job-1-salary" placeholder="Please input your Salary"></label><br><br>
 
                     <label for="job-1-remote">Remote Work:</label>
@@ -67,6 +75,7 @@
 
 
                 </form>
+            </div>
 
             </div>
 
@@ -75,7 +84,12 @@
                     <h2>Job 2:</h2>
                     <h2 id="company-2-Name"></h2>
                 </div>
+            <div id="job-content">
                 <form>
+
+                    <label for="job-2-name">Company Name: </label>
+                    <input id="job-2-name" type="text" placeholder="Company Name"><br><br>
+
                     <label for="job-2-salary">Salary:<input type="number" id="job-2-salary" placeholder="Please input your Salary"></label><br><br>
 
                     <label for="job-2-remote">Remote Work:</label>
@@ -93,6 +107,7 @@
                     <label for="job-2-stocks">Stock Value: </label>
                     <input id="job-2-stocks" type="number" placeholder="Enter total stock value"><br><br>
                 </form>
+            </div>
             </div>
         </div>
 

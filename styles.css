@@ -39,7 +39,6 @@ body{
     border-radius: 10px;
     height: 400px;
     width: 300px;
-    
 }
 
 
@@ -56,3 +55,6 @@ body{
     justify-content: center;
 }
  
+#job-content, #filter-content{
+    padding-left: 15px;
+}

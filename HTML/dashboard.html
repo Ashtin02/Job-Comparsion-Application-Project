@@ -8,7 +8,7 @@
 </head>
 <body>
     <Header>
-        <h1>
+        <h1 id="title">
             Job Comparison Application
         </h1>
 
@@ -23,30 +23,83 @@
         </nav>
     </Header>
 
-    <section id="job-comparison">
+    <div id="job-comparison">
         <div id="job-forms-container">
-        <div id="job-1-container">
-            <h2>Job 1</h2>
-            <form>
-                <label for="Job-1-Salary">Salary:</label><br>
-                <input type="number" id="Job-1-Salary" placeholder="Please input your Salary">
-                <label 
-            </form>
 
+            <div id="filter-container">
+
+                <div id="filter-header">
+                    <h2>Filters</h2>
+                </div>
+                <form id="filter-form">
+                    <label><input type="checkbox" name="filter" value="salary"> Salary</label><br><br>
+                    <label><input type="checkbox" name="filter" value="remote"> Remote Work</label><br><br>
+                    <label><input type="checkbox" name="filter" value="worklife"> Work/Life Balance</label><br><br>
+                    <label><input type="checkbox" name="filter" value="growth"> Growth Opportunities</label><br><br>
+                    <label><input type="checkbox" name="filter" value="stocks"> Stocks</label><br><br>
+                </form>
+
+
+            </div>
+            
+            <div id="job-1-container">
+                    <div id="Job-1-Header">
+                        <h2>Job 1:</h2>
+                        <h2 id="company-1-Name"></h2>
+                    </div>
+                <form id="job-1-form">
+                    <label for="job-1-salary">Salary:<input type="number" id="job-1-salary" placeholder="Please input your Salary"></label><br><br>
+
+                    <label for="job-1-remote">Remote Work:</label>
+                    <select id="job-1-remote">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><br><br>
+
+                    <label for="job-1-workLife">Work/Life Balance Rating (1-10):</label>
+                    <input id="job-1-workLife" type="number" min="1" max="10" placeholder="Rate 1-10"><br><br>
+
+                    <label for="job-1-growth">Growth Opprotunity Rating (1-10):</label>
+                    <input id="job-1-growth" type="number" min="1" max="10" placeholder="Rate 1-10"><br><br>
+
+                    <label for="job-1-stocks">Stock Value: </label>
+                    <input id="job-1-stocks" type="number" placeholder="Enter total stock value"><br><br>
+
+
+                </form>
+
+            </div>
+
+            <div id="job-2-container">
+                <div id="Job-2-Header">
+                    <h2>Job 2:</h2>
+                    <h2 id="company-2-Name"></h2>
+                </div>
+                <form>
+                    <label for="job-2-salary">Salary:<input type="number" id="job-2-salary" placeholder="Please input your Salary"></label><br><br>
+
+                    <label for="job-2-remote">Remote Work:</label>
+                    <select id="job-2-remote">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select><br><br>
+
+                    <label for="job-2-workLife">Work/Life Balance Rating (1-10):</label>
+                    <input id="job-2-workLife" type="number" min="1" max="10" placeholder="Rate 1-10"><br><br>
+
+                    <label for="job-2-growth">Growth Opprotunity Rating (1-10):</label>
+                    <input id="job-2-growth" type="number" min="1" max="10" placeholder="Rate 1-10"><br><br>
+
+                    <label for="job-2-stocks">Stock Value: </label>
+                    <input id="job-2-stocks" type="number" placeholder="Enter total stock value"><br><br>
+                </form>
+            </div>
         </div>
 
-        <div id="job-2-container">
-            <h2>Job 2</h2>
-            <form>
-                <label for="Job-2-Salary">Salary:</label><br>
-                <input type="number" id="Job-2-Salary" placeholder="Please input your Salary"> 
-
-            </form>
+        <div id="button-container">
+            <button id="compare-button">Compare</button>
         </div>
-        </div>
-
-        <button id="compare-btn">Compare</button>
-
-    </section>
+    
+    </div>
 </body>
 </html>

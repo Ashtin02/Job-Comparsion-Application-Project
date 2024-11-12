@@ -7,7 +7,9 @@ CREATE TABLE USERS(
     Email VARCHAR(100) UNIQUE,				-- User Email used to sign up
 	User_Password VARCHAR(100),				-- User Password
 	RegistrationDate DATE,					-- Date Registered
-    LastLogin DATE 							-- Last date logged in
+    LastLogin DATE, 						-- Last date logged in
+    JobType VARCHAR(20) CHECK (JobType IN ('salary', 'remote', 'worklife', 'growth')), 	-- What type of job is it more geared towards
+    DesiredJobPosition VARCHAR(50)			-- Jobs that they desire the most
 );
 
 -- Creating JobOffer table
@@ -15,9 +17,10 @@ CREATE TABLE JOBOFFERS (
     OfferID INT PRIMARY KEY AUTO_INCREMENT,  -- Primary key
     UserID INT NOT NULL,                     -- Foreign key referencing USERS
     OfferDate DATE NOT NULL,                 -- Date the offer was made
-    JobType VARCHAR(20) CHECK (JobType IN ('Work Life Balance', 'Salary Focused', 'Mixed')),  -- What type of job is it more geared towards
+    JobType VARCHAR(20) CHECK (JobType IN ('salary', 'remote', 'worklife', 'growth')), 	-- What type of job is it more geared towards
     Salary DECIMAL(10, 2),					  -- Salary of job offer
     JobDescription TEXT,					  -- Description of job offer
+    JobPosition VARCHAR(50),				  -- Job position
     FOREIGN KEY (UserID) REFERENCES USERS(UserID) ON DELETE CASCADE
 );
 
@@ -25,8 +28,9 @@ CREATE TABLE JOBOFFERS (
 CREATE TABLE RESULTS(
     ResultID INT PRIMARY KEY AUTO_INCREMENT,  -- Primary key
     OfferID INT NOT NULL,                     -- Foreign key referencing JOBOFFERS
-    JobType VARCHAR(20) CHECK (JobType IN ('Work Life Balance', 'Salary Focused', 'Mixed')),	-- What type of job is it more geared towards
+    JobType VARCHAR(20) CHECK (JobType IN ('salary', 'remote', 'worklife', 'growth')), 	-- What type of job is it more geared towards
     Salary DECIMAL(10, 2),					  -- Salary of job offer
+    JobPosition VARCHAR(50),					  -- Basically their job title ex. front end developer
     JobDescription TEXT,					  -- Description of job offer
     FOREIGN KEY (OfferID) REFERENCES JOBOFFERS(OfferID) ON DELETE CASCADE  -- Reference to JOBOFFERS
 );

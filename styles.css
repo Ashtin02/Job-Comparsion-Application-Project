@@ -25,6 +25,57 @@ a {
     color: white;
 }
 
+#job-1-container, #job-2-container, #filter-container{
+    background-color: #d2a476;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: black;
+    width: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    height:100%;
+}
+
+#filter-header{
+    justify-content: center;
+}
+
+#button-container{
+    display:flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: auto;
+}
+ 
+#job-content, #filter-content{
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+
+#compare-button{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#job-1-form, #job-2-form, #filter-form{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: space-between;
+}
+
 #job-forms-container{
     display:flex;
     width: 100%;
@@ -91,5 +142,3 @@ a {
     height: 100%;
     justify-content: space-between;
 }
-
- 

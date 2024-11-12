@@ -6,14 +6,23 @@ body{
     justify-content: center;
 }
 
-#navBar ul{
-    display: inline;
+Header{
+    background-color: rgb(144, 238, 144, .5);
+}
+Header #navBar ul {
+    -webkit-text-stroke: black 0.5px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    text-align: horizontal;
+    padding-right: 15px;
+    padding-left: 15px;
     list-style: none;
-    background-color: green
 }
 
-#navBar a{
-    text-decoration: white; 
+a {
+    color: white;
 }
 
 #job-forms-container{

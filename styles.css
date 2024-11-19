@@ -8,6 +8,8 @@ body{
 
 Header{
     background-color: rgb(144, 238, 144, .5);
+    padding-bottom: 20px;
+    padding-top: 20px
 }
 Header #navBar ul {
     -webkit-text-stroke: black 0.5px;

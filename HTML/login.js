@@ -1,6 +1,8 @@
-document.getElementById("loginButton").addEventListener("click", login);
-
-document.getElementById("registerButton").addEventListener("click", login);
+var buttonLogin = document.getElementById("loginButton");
+buttonLogin.addEventListener('click', login);
+    
+var registerButton = document.getElementById("registerButton");
+registerButton.addEventListener('click', register);
 
 function login() {
     const emailInputField = document.getElementById("emailLogin");
@@ -29,3 +31,4 @@ function register() {
         alert("You successfully registered.");
     }
 }
+

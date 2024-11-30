@@ -47,6 +47,10 @@ a {
     background-color: black
 }
 
+#forgotPassword{
+    text-decoration-line: underline;
+}
+
 #job-forms-container{
     display:flex;
     width: 100%;

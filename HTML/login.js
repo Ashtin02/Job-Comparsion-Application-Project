@@ -1,9 +1,21 @@
+/*
+Creates event handler for 'Sign In' button and calls login function
+when button is clicked.
+*/
 var buttonLogin = document.getElementById("loginButton");
 buttonLogin.addEventListener('click', login);
-    
+
+/*
+Creates event handler for 'Register' button and calls register function
+when button is clicked.
+*/
 var registerButton = document.getElementById("registerButton");
 registerButton.addEventListener('click', register);
 
+/*
+Removes leading and trailing whitespaces before validating input. Checks to make sure input fields are not blank.
+If both input fields are not blank lets user know that login was successful, clears input fields and redirects user to home page when user logs in.
+*/
 function login() {
     const emailInputField = document.getElementById("emailLogin");
     const passwordInputField = document.getElementById("passwordLogin");
@@ -18,6 +30,10 @@ function login() {
     }
 }
 
+/*
+Removes leading and trailing whitespaces before validating input. Checks to make sure input fields are not blank.
+If both input fields are not blank lets user know that registration was successful, clears input fields and redirects user to home page when user registers.
+*/
 function register() {
     const emailInputField = document.getElementById("emailRegister");
     const passwordInputField = document.getElementById("passwordRegister");

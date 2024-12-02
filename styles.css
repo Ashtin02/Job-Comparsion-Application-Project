@@ -28,27 +28,55 @@ a {
 }
 
 #login input{
-    display: block;
+    display: block; 
+    margin: auto;
+    width: 50%;
+    height: 22px;
 }
 
-#login button{
+#loginButton{
+    display: block; 
+    margin: auto;
+    height: 30px;
+    width: 25%;
+    font-size: medium;
     -webkit-text-stroke: black 0.5px;
     color: white;
-    background-color: black
+    background-color: black 
 }
 
 #register input{
-    display: block;
+    display: block; 
+    margin: auto;
+    width: 50%;
+    height: 22px;
 }
 
-#register button{
+#registerButton{
+    display: block; 
+    margin: auto;
+    height: 30px;
+    width: 25%;
+    font-size: medium;
     -webkit-text-stroke: black 0.5px;
     color: white;
     background-color: black
 }
 
+
 #forgotPassword{
     text-decoration-line: underline;
+    text-align: center;
+    font-size: 13pt;
+}
+#login{
+    text-align: center;
+    font-size: 15pt; 
+}
+
+#register{
+    text-align: center;
+    font-size: 15pt;
 }
 
 #job-forms-container{

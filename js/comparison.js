@@ -21,6 +21,8 @@
             const results = jobComparison(filters, job1, job2);
 
             localStorage.setItem('results', results.join('\n'));
+            resetForms();
+            alert('Please visit the View/Save Results page to view your job comparison results!');
 
         })
         }
@@ -75,10 +77,10 @@
             }
 
             if (job1.remote && !job2.remote) {
-                job1Score = filters.remoteFilter ? 2 : 1;
+                job1Score += filters.remoteFilter ? 2 : 1;
                 reasons.push(`${job1.name} offers remote work while ${job2.name} does not`);
             } else if (!job1.remote && job2.remote) {
-                job2Score = filters.remoteFilter ? 2 : 1;
+                job2Score += filters.remoteFilter ? 2 : 1;
                 reasons.push(`${job2.name} offers remote work while ${job1.name} does not`);
             } else {
                 job1Score += 1;
@@ -87,10 +89,10 @@
             }
 
             if (job1.worklife > job2.worklife) {
-                job1Score = filters.remoteFilter ? 2 : 1;
+                job1Score += filters.remoteFilter ? 2 : 1;
                 reasons.push(`${job1.name} has a better work/life balance.`);
             } else if (job1.worklife < job2.worklife) {
-                job2Score = filters.remoteFilter ? 2 : 1;
+                job2Score += filters.remoteFilter ? 2 : 1;
                 reasons.push(`${job2.name} has a better work/life balance.`)
             }   else {
                 job1Score += 1;
@@ -100,10 +102,10 @@
 
 
             if (job1.growth > job2.growth) {
-                job1Score = filters.growthFilter ? 2 : 1;
+                job1Score += filters.growthFilter ? 2 : 1;
                 reasons.push(`${job1.name} is known for having better career growth.`);
             } else if (job1.growth < job2.growth) {
-                job2Score = filters.remoteFilter ? 2 : 1;
+                job2Score += filters.remoteFilter ? 2 : 1;
                 reasons.push(`${job2.name} is known for having better career growth.`);
             }   else {
                 job1Score += 1;
@@ -112,10 +114,10 @@
             }
 
             if (job1.stocks > job2.stocks) {
-                job1Score = filters.stocksFilter ? 2 : 1;
+                job1Score += filters.stocksFilter ? 2 : 1;
                 reasons.push(`${job1.name} has better stock value for its employees.`);
             } else if (job1.stocks < job2.stocks) {
-                job2Score = filters.stocksFilter ? 2 : 1;
+                job2Score += filters.stocksFilter ? 2 : 1;
                 reasons.push(`${job2.name} has better stock value for its employees`)
             }   else {
                 job1Score += 1;
@@ -124,14 +126,14 @@
             }
 
             if (job1Score > job2Score) {
-                reasons.unshift(`${job1.name} had an overall better score of ${job1Score} when comparing their options offered against the other job. It 
-                is our recommendation that based on the entered information and filters you selected, you should go with their offer! \n`);
+                reasons.unshift(`${job1.name} had an overall better score with ${job1Score} points against ${job2.name}'s ${job2Score} when comparing their options offered. It 
+                is our recommendation that based on the entered information and preferences you selected, you should go with their offer! \n`);
             } else if (job1Score < job2Score) {
-                reasons.unshift(`${job2.name} had an overall better score of ${job2Score} when comparing their options offered against the other job. It 
-                is our recommendation that based on the entered information and filters you selected, you should go with their offer! \n`);
+                reasons.unshift(`${job2.name} had an overall better score with ${job2Score} points against ${job1.name}'s ${job1Score} when comparing their options offered. It 
+                is our recommendation that based on the entered information and preferences you selected, you should go with their offer! \n`);
             } else {
-                reasons.unshift(`You're spoiled for options! Both job offers are tied based on the information you entered and the filters you selected. You can't go 
-                wrong with either option!`);
+                reasons.unshift(`You're spoiled for options! Both job offers are tied based on the information you entered and the preferences you selected. You can't go 
+                wrong with either choice!`);
             }
 
             return reasons;
@@ -142,6 +144,15 @@
             const [salaryFilter, remoteFilter, worklifeFilter, growthFilter, stocksFilter] = Array.from(filtersRef);
             return { salaryFilter, remoteFilter, worklifeFilter, growthFilter, stocksFilter };
 
+        }
+
+        function resetForms() {
+            const filterForm = id('filter-form');
+            filterForm.reset();
+            const job1Form = id('job-1-form');
+            job1Form.reset();
+            const job2Form = id('job-2-form')
+            job2Form.reset();
         }
         
     

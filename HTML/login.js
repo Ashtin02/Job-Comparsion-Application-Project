@@ -26,7 +26,7 @@ function login() {
     else {
         document.getElementById("emailLogin").value = "";
         document.getElementById("passwordLogin").value = "";
-        window.location.href = "http://127.0.0.1:3000/HTML/dashboard.html";
+        window.location.href = "dashboard.html";
         alert("You successfully logged in.");
     }
 }
@@ -45,7 +45,7 @@ function register() {
     else {
         document.getElementById("emailRegister").value = "";
         document.getElementById("passwordRegister").value = "";
-        window.location.href = "http://127.0.0.1:3000/HTML/dashboard.html";
+        window.location.href = "dashboard.html";
         alert("You successfully registered.");
     }
 }

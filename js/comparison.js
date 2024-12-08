@@ -20,7 +20,8 @@
 
             const results = jobComparison(filters, job1, job2);
 
-            localStorage.setItem('results', results.join('\n'));
+            const number = localStorage.length + 1;
+            localStorage.setItem(`results${number}`, results.join('\n'));
             resetForms();
             alert('Please visit the View/Save Results page to view your job comparison results!');
 

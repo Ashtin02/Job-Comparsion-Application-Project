@@ -187,3 +187,26 @@ a {
     width: 700px;
     height: auto;
 }
+
+#results{
+    flex: 1;
+    background-color: #d1a36f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #000;
+    margin-bottom: 30pt;
+}
+
+#button-container button{
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+

@@ -2,14 +2,14 @@
 Creates event handler for 'Sign In' button and calls login function
 when button is clicked.
 */
-var buttonLogin = document.getElementById("loginButton");
+let buttonLogin = document.getElementById("loginButton");
 buttonLogin.addEventListener('click', login);
 
 /*
 Creates event handler for 'Register' button and calls register function
 when button is clicked.
 */
-var registerButton = document.getElementById("registerButton");
+let registerButton = document.getElementById("registerButton");
 registerButton.addEventListener('click', register);
 
 /*

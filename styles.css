@@ -8,6 +8,8 @@ body{
 
 Header{
     background-color: rgb(144, 238, 144, .5);
+    padding-bottom: 20px;
+    padding-top: 24px
 }
 Header #navBar ul {
     -webkit-text-stroke: black 0.5px;
@@ -23,6 +25,58 @@ Header #navBar ul {
 
 a {
     color: white;
+}
+
+#login input{
+    display: block; 
+    margin: auto;
+    width: 50%;
+    height: 22px;
+}
+
+#loginButton{
+    display: block; 
+    margin: auto;
+    height: 30px;
+    width: 25%;
+    font-size: medium;
+    -webkit-text-stroke: black 0.5px;
+    color: white;
+    background-color: black 
+}
+
+#register input{
+    display: block; 
+    margin: auto;
+    width: 50%;
+    height: 22px;
+}
+
+#registerButton{
+    display: block; 
+    margin: auto;
+    height: 30px;
+    width: 25%;
+    font-size: medium;
+    -webkit-text-stroke: black 0.5px;
+    color: white;
+    background-color: black
+}
+
+
+#forgotPassword{
+    text-decoration-line: underline;
+    text-align: center;
+    font-size: 13pt;
+}
+#login{
+    text-align: center;
+    font-size: 15pt; 
+}
+
+#register{
+    text-align: center;
+    font-size: 15pt;
 }
 
 #job-forms-container{

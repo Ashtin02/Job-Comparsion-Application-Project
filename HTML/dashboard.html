@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+    <script src ='../js/comparison.js' defer></script>
+
     <title>Dashboard</title>
 </head>
 <body>
@@ -29,11 +31,11 @@
                 
                 <div id="filter-content">
                     <form id="filter-form">
-                        <label><input type="checkbox" name="filter" value="salary"> Salary<br>&nbsp;&nbsp;&nbsp;&nbsp; Salary is a key driver</label><br><br>
-                        <label><input type="checkbox" name="filter" value="remote"> Remote Work<br>&nbsp;&nbsp;&nbsp;&nbsp; Work from home is available</label><br><br>
-                        <label><input type="checkbox" name="filter" value="worklife"> Work/Life Balance<br>&nbsp;&nbsp;&nbsp;&nbsp; Employess report a good QOL</label><br><br>
-                        <label><input type="checkbox" name="filter" value="growth"> Growth Opportunities <br>&nbsp;&nbsp;&nbsp;&nbsp; Employees often report high upward mobility</label><br><br>
-                        <label><input type="checkbox" name="filter" value="stocks"> Stock Options <br>&nbsp;&nbsp;&nbsp;&nbsp; Stocks are offered at this company</label><br><br>
+                        <label><input class = 'filter' type="checkbox" name="filter" value="salary"> Salary<br>&nbsp;&nbsp;&nbsp;&nbsp; Salary is a key driver</label><br><br>
+                        <label><input class = 'filter' type="checkbox" name="filter" value="remote"> Remote Work<br>&nbsp;&nbsp;&nbsp;&nbsp; Work from home is available</label><br><br>
+                        <label><input class = 'filter' type="checkbox" name="filter" value="worklife"> Work/Life Balance<br>&nbsp;&nbsp;&nbsp;&nbsp; Employess report a good QOL</label><br><br>
+                        <label><input class = 'filter' type="checkbox" name="filter" value="growth"> Growth Opportunities <br>&nbsp;&nbsp;&nbsp;&nbsp; Employees often report high upward mobility</label><br><br>
+                        <label><input class = 'filter' type="checkbox" name="filter" value="stocks"> Stock Options <br>&nbsp;&nbsp;&nbsp;&nbsp; Stocks are offered at this company</label><br><br>
                     </form>
                 </div>
 
@@ -52,22 +54,22 @@
                 <form id="job-1-form">
 
                     <label for="job-1-name">Company Name: </label>
-                    <input id="job-1-name" type="text" placeholder="Company Name"><br><br>
+                    <input id="job-1-name" type="text" placeholder="Company Name" required><br><br>
 
                     <label for="job-1-salary">Salary:</label>
-                    <input type="number" id="job-1-salary" placeholder="Please input your Salary"><br><br>
+                    <input type="number" id="job-1-salary" placeholder="Please input your Salary" required><br><br>
 
                     <label for="job-1-remote">Remote Work:</label>
                     <input id="job-1-remote" type="checkbox"><br><br>
 
                     <label for="job-1-workLife">Work/Life Balance Rating: (1-10)</label>
-                    <input id="job-1-workLife" type="range" min="1" max="10" step="1"><br><br>
+                    <input id="job-1-workLife" type="range" min="1" max="10" step="1" required><br><br>
 
                     <label for="job-1-growth">Growth Opprotunity Rating: (1-10)</label>
-                    <input id="job-1-growth" type="range" min="1" max="10" step="1"><br><br>
+                    <input id="job-1-growth" type="range" min="1" max="10" step="1" required><br><br>
 
                     <label for="job-1-stocks">Stock Value: </label>
-                    <input id="job-1-stocks" type="number" placeholder="Enter total stock value"><br><br>
+                    <input id="job-1-stocks" type="number" placeholder="Enter total stock value, or 0 for no stocks" required><br><br>
 
 
                 </form>
@@ -84,22 +86,22 @@
                 <form id="job-2-form">
 
                     <label for="job-2-name">Company Name: </label>
-                    <input id="job-2-name" type="text" placeholder="Company Name"><br><br>
+                    <input id="job-2-name" type="text" placeholder="Company Name" required><br><br>
 
                     <label for="job-2-salary">Salary:</label>
-                    <input type="number" id="job-2-salary" placeholder="Please input your Salary"><br><br>
+                    <input type="number" id="job-2-salary" placeholder="Please input your Salary" required><br><br>
 
                     <label for="job-2-remote">Remote Work:</label>
                     <input id="job-2-remote" type="checkbox"> <br><br>
 
                     <label for="job-2-workLife">Work/Life Balance Rating: (1-10)</label>
-                    <input id="job-2-workLife" type="range" min="1" max="10" step="1"><br><br>
+                    <input id="job-2-workLife" type="range" min="1" max="10" step="1" required><br><br>
 
                     <label for="job-2-growth">Growth Opprotunity Rating: (1-10)</label>
-                    <input id="job-2-growth" type="range" min="1" max="10" step="1"><br><br>
+                    <input id="job-2-growth" type="range" min="1" max="10" step="1" required><br><br>
 
                     <label for="job-2-stocks">Stock Value: </label>
-                    <input id="job-2-stocks" type="number" placeholder="Enter total stock value"><br><br>
+                    <input id="job-2-stocks" type="number" placeholder="Enter total stock value, or 0 for no stocks" required><br><br>
                 </form>
             </div>
             </div>

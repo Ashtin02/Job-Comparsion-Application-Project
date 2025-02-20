@@ -16,7 +16,7 @@ function init() {
             const result = localStorage.getItem(key);
 
             // Create a div for each result and add it to the results container
-            const resultDiv = document.createElement('div');
+            const resultDiv = document.createAttribute('div');
             resultDiv.classList.add('result-item');
             resultDiv.innerHTML = `
                 <h2>${key}</h2>

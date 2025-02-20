@@ -45,7 +45,7 @@ function register() {
     else {
         document.getElementById("emailRegister").value = "";
         document.getElementById("passwordRegister").value = "";
-        window.location.href = "dashboard.html";
+        window.location.href = "http://127.0.0.2:5500/HTML/dashboard.html";
         alert("You successfully registered.");
     }
 }

@@ -36,8 +36,8 @@
             // saves the results to local storage, names the results sequentially based on which would be the next
             // one that is available
 
-            const number = localStorage.length + 1;
-            localStorage.setItem(`results${number}`, results.join('\n'));
+            const number = sessionStorage.length + 1;
+            sessionStorage.setItem(`results${number}`, results.join('\n'));
             resetForms();
             alert('Please visit the View/Save Results page to view your job comparison results!');
 
@@ -251,4 +251,4 @@
     function qsa(query) {
         return document.querySelectorAll(query);
     }
-})();
+}); 
